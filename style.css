@@ -1,0 +1,519 @@
+body{
+  padding-top: 75px;
+  background-image: url(wiw.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+ 
+  z-index: 1000;
+  box-shadow:  10px 15px 20px rgb(0, 255, 128);
+  background-color: rgba(53, 168, 59, 0.877);
+}
+.logo{
+  
+  font-size: 40px;
+  font-weight: 600;
+  font-style: italic;
+  color: #2e8b5dbd;
+  font-family: 'Segoe UI',sans-serif;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(20, 20, 20, 0.753);
+  transition: color 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20;
+  padding: 0 20px;
+ 
+}
+
+
+
+
+/*
+.all{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  width: 250px;
+  margin-left: 40%;
+  padding: 10px;
+  position: fixed;
+  z-index: 9999;
+
+}
+*/
+.all{
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  
+  padding: 20px;
+  box-shadow: 10px 15px 20px rgba(26, 54, 54, 0.74);
+  z-index: 9999;
+}
+.active{
+  display: block;
+}
+
+.bar{
+  display: none;
+}
+
+.hidden{
+  display: block;
+}
+ #btn{
+  font-style: italic;
+  margin-right: 70px;
+  position: relative;
+  background-color: #19212b;
+  color: #ecf0f1;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+ }
+ #btn:hover{
+ box-shadow: 10px 15px 20px rgb(16, 29, 29);
+ }
+ 
+ .bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 200px;
+  background-color:  #45b945;
+  border-radius: 5px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease-in-out;
+  overflow: auto;
+  z-index: 1000;
+  box-shadow: 10px 15px 20px rgb(31, 71, 71);
+
+ }
+ .bar ul{
+  list-style: none;
+
+
+  padding: 0;
+  margin: 0;
+ }
+
+.bar ul li{
+padding: 15px 20px;
+color: #090b0c;
+cursor: pointer;
+transition: background-color 0.3s ease;
+
+} 
+.list li a{
+  list-style: none;
+text-decoration: none;
+color: #0b1314;
+margin-left: 15px;
+font-style: italic;
+}
+.list li:hover{
+  background-color: rgb(250, 244, 244);
+}
+.menu{
+font-style: italic;
+  
+  margin-left: 45px;
+}
+
+.bar .del{
+  
+  margin-top: 0;
+  position: absolute;
+  top: 10;
+  right: 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 32px;
+  box-shadow:  0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+.home{
+  margin-right: 140px;
+ 
+}
+
+.home i{
+ margin-right: 10px;
+ cursor: pointer;
+ color: black;
+ font-size: 24px;
+}
+
+.user i{
+margin-left: 15px;
+ cursor: pointer;
+}
+.home span{
+  cursor: pointer;
+}
+.home span:hover{
+  border-bottom-style: double ; 
+  color: #ecf0f1;
+ 
+
+  
+}
+
+.user span{
+cursor: pointer;
+
+}
+.user span:hover{
+  
+  border-bottom-style: double ;
+ color: #ecf0f1;
+
+
+}
+
+.imglogo{
+ 
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  background: conic-gradient(
+    from 0deg,red,orange,yellow,green,cyan,blue,violet,red
+  );
+  animation:rotateBorder 2s linear infinite;
+  -webkit-mask:
+  radial-gradient(farthest-side,transparent calc(100% -5px),black 100%);
+
+  mask: 
+  radial-gradient(farthest-side,transparent calc(100% -5px),black 100%);
+object-fit: cover;
+}
+@keyframes rotateBorder{
+  0%{
+    background-position: 0deg;
+    transform: rotate(0deg);
+  }
+  100%{
+    background-position: 360deg;
+    transform: rotate(360deg);
+  }
+}
+
+.drop{
+  display: none;}
+
+.showmeDrop{
+  display: block;
+}
+
+.drop{
+ 
+  position: fixed;
+  background-color: #35d673d8;
+  width: 200px;
+  border-radius: 12px;
+  margin-top: 25px;
+  margin-right: 110px;
+
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  top:7% ;
+  margin-right: 34%;
+  transform: translate(-34%,-5%)scale(0.9);
+  
+  transition: opacity 0,5s ease,transform 0.5s ease;
+
+  box-shadow: 10px 15px 20px rgb(66, 209, 73);
+
+  
+
+} 
+
+.avatar{
+    border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  margin-left: 60px;
+}
+
+.btnlogout{
+ background-color: blueviolet;
+  margin-top: 40px;
+  box-shadow: 10px 15px 20px rgb(25, 205, 211);
+border-radius: 20px;
+}
+.log{
+  margin-left: 53px;
+}
+
+
+/* حاوية النماذج */
+.all {
+  background-color: rgb(27, 71, 62);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  
+  transition: all 0.3s ease;
+}
+
+/* العناوين */
+ .all h2 {
+  text-align: center;
+  color: #d6c2c2;
+  margin-bottom: 20px;
+}
+
+/* الحقول */
+.all 
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 80%;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border 0.3s;
+  font-size: 14px;
+}
+
+ .all input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+/* الزر */
+ .all button[type="submit"] {
+  width: 90%;
+  padding: 12px;
+  background-color: #2576c2;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+ .all button:hover {
+  background-color: #00b377;
+}
+
+/* نصوص الروابط */
+ .all label {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+ .all span {
+  display: block;
+  color: #e4e4e4;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 5px;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+ .all span:hover {
+  color: #0056b3;
+}
+
+/* رسالة الخطأ */
+#matchError {
+  color: red;
+  font-size: 13px;
+  text-align: center;
+  display: none;
+}
+
+/* إخفاء العناصر */
+#sign_in, #sign_up {
+  transition: all 0.4s ease;
+}
+
+
+
+/* media query*/
+
+@media (max-width: 1024px) {
+  /* حاوية وهمية للشريط السفلي */
+  .bottom-bar-fake {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #2bb92b;
+    z-index: 999;
+  }
+
+  /* عنصر القائمة */
+  .ground {
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+  }
+
+  .ground #slidbtn {
+    font-size: 22px;
+    color: rgb(17, 24, 24);
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* عنصر الهوم */
+  .home {
+    position: fixed !important;
+    bottom: 0;
+    right: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+   
+    color: rgb(10, 14, 14);
+    margin: 0 !important;
+  }
+
+  .home i {
+    font-size: 24px !important;
+    margin-bottom: 15px;
+    margin-top: 0;
+    color: rgb(18, 22, 22);
+
+  }
+
+  .home span{
+    display: none;
+  }
+  /* تصغير الشريط العلوي */
+  .logo {
+    font-size: 20px !important;
+  }
+
+  #btn {
+    font-size: 10px !important;
+    padding: 6px 8px;
+    margin-right: 50px;
+  }
+
+  
+  .user i {
+    font-size: 15px;
+    margin-right: 40px;
+    
+    
+
+  }
+  .user{
+      margin-right: 30px;
+  }
+  .pro{
+     font-size: 15px;
+    margin-right: 30px;
+  }
+   .drop{
+     font-size: 15px;
+    margin-left: -50px;
+    margin-top: 40px;
+   
+
+  }
+
+  .home, .ground {
+    background: none !important;
+  }
+  .content h2{
+ width: 100%;
+ white-space: normal;
+ word-wrap: break-word;
+ overflow-wrap: break-word;
+ font-size: 18px;
+}
+}
+
+/*private content*/
+.content{
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 50px;
+  padding: 30px;
+  
+  height: 300px;
+  
+ 
+}
+.content h2{
+  font-family: monospace;
+  color: white;
+}
+
+
+/*
+.content h2{
+ width: 100%;
+ white-space: normal;
+ word-wrap: break-word;
+ overflow-wrap: break-word;
+}*/
+
+.bb a{
+text-decoration: none;
+list-style: none;
+color: wheat;
+font-style: italic;
+}
+.bb button{
+border-radius: 10px;
+font-size: 20px;
+margin-top: 0px;
+background-color: #181b18;
+
+}
+.bb button:hover{
+box-shadow: 10PX 15PX 20PX rgb(64, 170, 170);
+background-color: #00b377;
+border-color: #090b0c;
+}
+.bb{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

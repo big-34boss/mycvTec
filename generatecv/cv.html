@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cv.css">
+
+</head>
+<body>
+    <div class="formatcv">
+
+          <form id="cvForm">
+    <h2>Create Your CV</h2>
+
+    
+
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label>Job Title</label>
+      <input type="text" name="jobTitle" required>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <select name="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Date of Birth</label>
+      <input type="date" name="dob">
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" name="email">
+    </div>
+
+    <div class="form-group">
+      <label>Phone</label>
+      <input type="text" name="phone">
+    </div>
+
+   
+
+    <div class="form-group">
+      <label>Location</label>
+      <input type="text" name="location">
+    </div>
+
+    <div class="form-group">
+     
+      <label> Objective</label>
+     
+      <textarea name="objective" rows="4"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Skills (e.g., Word, Excel, PowerPoint)</label>
+      <textarea name="skills" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Languages (e.g., English, Arabic, French)</label>
+      <textarea name="languages" rows="2"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Work Experience</label>
+      <textarea name="experience" rows="6" placeholder="Company name, position, period, tasks..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Education</label>
+      <textarea name="education" rows="4" placeholder="School, degree, duration, GPA..."></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Activities</label>
+      <textarea name="activities" rows="3"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label>Interests</label>
+      <input type="text" name="interests">
+    </div>
+
+   
+
+    <button type="submit">Generate CV</button>
+  </form>
+
+
+    </div>
+    
+
+    <!--استقبال البيانات-->
+
+   <div id="cvOutput" class="cv-preview" style="display: none;">
+  <!-- اليسار -->
+  <div class="cv-main">
+    <h2 id="cvName"></h2>
+    <h4 id="cvJobTitle"></h4>
+
+    <p><strong><i class="fa-solid fa-person-half-dress"></i></strong> <span id="cvGender"></span></p>
+    <p><strong><i class="fa-solid fa-calendar-days"></i></strong> <span id="cvDob" style="margin-right: 200px;"></span></p>
+    <p><strong><i class="fa-solid fa-envelope"></i></strong> <span id="cvEmail"></span></p>
+    <p><strong><i class="fa-solid fa-phone"></i></strong> <span id="cvPhone"></span></p>
+    
+    <p><strong><i class="fa-solid fa-location-dot"></i></strong> <span id="cvLocation"></span></p>
+
+    <h3>Skills</h3>
+    <p id="cvSkills"> <br>dojhkdd</p>
+
+    <h3>Languages</h3>
+    <p id="cvLanguages"> <br>dojhkdd</p>
+
+    <h3>Interests</h3>
+    <p id="cvInterests"> <br>dojhkdd</p>
+
+  </div>
+
+  <!-- اليمين -->
+  <div class="cv-sidebar">
+    <h3>  <i class="fa-solid fa-bullseye"></i> Objective</h3>
+    <p id="cvObjective"></p><br>
+
+    <h3> <i class="fa-solid fa-user-doctor"></i>  Work Experience</h3>
+    <p id="cvExperience"></p><br>
+
+    <h3> <i class="fa-solid fa-school"></i>  Education</h3>
+    <p id="cvEducation"></p><br>
+
+    <h3> <i class="fa-solid fa-chart-line"></i>  Activities</h3>
+    <p id="cvActivities"></p><br>
+  </div>
+</div>
+
+  <button onclick="downloadCV()" id="pdfBtn" style="display: none;">Download CV as PDF</button>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script src="cv.js"></script>
+</body>
+</html>

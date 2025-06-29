@@ -1,0 +1,342 @@
+/* ملف CSS خارجي لتنسيق نموذج السيرة الذاتية */
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  background-image: url(wiw.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.formatcv {
+  max-width: 800px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#cvForm h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #fdfdfd;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+}
+
+button[type="submit"] {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #574fd6;
+}
+
+/* جعل التنسيق متجاوب مع الشاشات الصغيرة */
+@media (max-width: 768px) {
+  .formatcv {
+    padding: 15px;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 15px;
+    padding: 8px 10px;
+  }
+
+  button[type="submit"] {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #cvForm h2 {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  button[type="submit"] {
+    font-size: 14px;
+  }
+}
+
+#pdfBtn {
+  display: none; /* سيظهر فقط بعد إنشاء السيرة */
+  margin: 20px auto;
+  padding: 10px 25px;
+  background-color: #344ddb;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  transition: background 0.3s ease;
+  margin-left: 40%;
+}
+
+#pdfBtn:hover {
+  background-color: #2980b9;
+}
+
+/* مركز الزر أسفل السيرة الذاتية */
+.cv-preview + #pdfBtn {
+  text-align: center;
+  width: fit-content;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+  #pdfBtn {
+    width: 90%;
+    font-size: 15px;
+  margin-left: 30%;
+
+  }
+}
+
+
+
+/* تنسيقات احترافية لقسم عرض السيرة الذاتية فقط (cv-preview) */
+
+/* تنسيق عرض السيرة الذاتية بنظام شريط جانبي يمين ويسار */
+
+.cv-preview {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #ca9b9b;
+
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  line-height: 1.6;
+  position: relative;
+  height: 900px;
+}
+
+/* الشريط الجانبي الأيمن */
+.cv-sidebar {
+  width: 50%;
+  background-color: #9b9ec4;
+  padding: 25px;
+  box-sizing: border-box;
+  border-left: 4px solid #3072a5;
+  margin-left: 400px;
+  position: relative;
+  margin-top: 0;
+  height: 1000px;
+ 
+  
+}
+
+/* المحتوى الرئيسي على اليسار */
+.cv-main {
+  width: 50%;
+  padding: 30px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  
+}
+.cv-main span{
+  margin-right: 200px;
+    font-style: italic;
+
+}
+.cv-main h2{
+color: #ccc;
+font-style: italic;
+}
+.cv-main h4{
+color: #3848dd;
+font-style: italic;
+}
+.cv-preview h2 {
+  margin-top: 0;
+  font-size: 26px;
+  color: #8096af;
+  font-style: italic;
+}
+
+.cv-preview h3 {
+  font-size: 18px;
+  margin-top: 5px;
+  margin-bottom: 8px;
+  color: #2980b9;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+.cv-preview h4 {
+  font-size: 16px;
+  color: #34495e;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.cv-preview p,
+.cv-preview span {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cv-preview strong {
+  color: #222;
+  display: inline-block;
+  width: 130px;
+}
+
+/* استجابة للشاشات الكبيرة*/
+
+@media (max-width: 768px) {
+  .cv-preview {
+    width: 95%;
+    height: auto;
+    margin: 20px auto;
+  }
+
+  .cv-main,
+  .cv-sidebar {
+    width: 48%; /* بدل 50% لتوفير بعض المساحة */
+    padding: 15px;
+    height: 400;
+  }
+
+  .cv-sidebar {
+    margin-left: 50%; /* حافظ على وضعه على اليمين */
+    transform: translateX(-2%); /* تعديل طفيف لتوازن العرض */
+  }
+
+  .cv-preview h2 {
+    font-size: 20px;
+  }
+
+  .cv-preview h3 {
+    font-size: 16px;
+  }
+
+  .cv-preview h4 {
+    font-size: 14px;
+  }
+
+  .cv-preview p,
+  .cv-preview span,
+  .cv-preview strong {
+    font-size: 13px;
+    font-style: italic;
+
+  }
+
+  .cv-preview strong {
+    width: 90px;
+  }
+}
+
+
+/* استجابة للشاشات الصغيرة */
+
+@media (max-width: 480px) {
+  .cv-preview {
+    width: 98%;
+    height: 600px;
+    margin: 10px auto;
+  }
+
+  .cv-main,
+  .cv-sidebar {
+    width: 46%; /* أقل بقليل لتناسب الشاشات الصغيرة */
+    padding: 10px;
+    height: auto;
+  }
+
+  .cv-sidebar {
+    margin-left: 52%; /* دفع الشريط الجانبي أكثر لليمين */
+    transform: translateX(-4%); /* تعديل توازن العرض */
+    height: 600px;
+    width: 50%; /* أقل بقليل لتناسب الشاشات الصغيرة */
+
+  }
+
+  .cv-preview h2 {
+    font-size: 13px;
+  }
+
+  .cv-preview h3 {
+    font-size: 10px;
+  }
+
+  .cv-preview h4 {
+    font-size: 13px;
+  }
+
+  .cv-preview p,
+  .cv-preview span,
+  .cv-preview strong {
+    font-size: 10px;
+    font-style: italic;
+  }
+
+  .cv-preview strong {
+    width: 80px;
+  }
+
+   #pdfBtn {
+    width: 90%;
+    font-size: 15px;
+  margin-left: 20%;
+
+  }
+}
+
+
+/* استجابة للشاشات الصغيرة */
